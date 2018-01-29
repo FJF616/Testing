@@ -29,23 +29,23 @@ const greaterThanFifty = num => {
 };
 
 const add = (x, y) => {
-  return x + y;
+  return Number(x + y);
 };
 
 const subtract = (x, y) => {
-  return x - y;
+  return Number(x - y);
 };
 
 const divide = (x, y) => {
-  return x / y;
+  return Number(x / y);
 };
 
 const multiply = (x, y) => {
-  return x * y;
+  return Number(x * y);
 };
 
 const getRemainder = (x, y) => {
-  return x % y;
+  return Number(x % y);
 };
 
 const isEven = num => {
