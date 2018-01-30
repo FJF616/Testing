@@ -54,12 +54,30 @@ describe('Project-2 Functions', () => {
         });
     });
 
-    // describe(`'isInRange'`, () => {
-    //     const isInRange = funcs.isInRange;
-    //     it('should be a function', () => {
-    //         assert.typeOf(isInRange, 'function');
-    //     });
-    // });
+    describe(`'isInRange'`, () => {
+        const isInRange = funcs.isInRange;
+        it('should be a function', () => {
+            assert.typeOf(isInRange, 'function');
+        });
+        it('should return true if num is between 50 and 20, otherwise false', () => {
+            const invalid = [0, 3, 19, 51, 66, -5, 'hi'];
+            const bad = invalid.filter(isInRange); 
+            bad.forEach(result => {
+                assert.equal(result, false);
+            });
+            const valid = [21, 33, 49, 30];
+            const good = valid.filter(isInRange);
+            good.forEach(num => {
+                if (num < 20) {
+                    expect(num).to.eql(true);
+                } else if (num > 50) {
+                   expect(num).to.eql(false);
+                }
+                
+            });
+        });  
+    });    
+   
 
     // describe(`' isInteger'`, () =>{
     //     const isInteger = funcs.isInteger;
